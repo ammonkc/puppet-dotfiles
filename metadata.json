@@ -1,0 +1,12 @@
+{
+  "description": "Puppet module for installing dotfiles",
+  "summary": "Puppet module for installing dotfiles",
+  "author": "ammonkc",
+  "source": "git://github.com/ammonkc/puppet-dotfiles.git",
+  "project_page": "https://github.com/ammonkc/puppet-dotfiles",
+  "name": "ammonkc-dotfiles",
+  "checksums": {},
+  "dependencies": [],
+  "license": "The MIT License (MIT)",
+  "version": "0.0.1"
+}
