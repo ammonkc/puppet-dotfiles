@@ -7,7 +7,6 @@ class dotfiles {
     user { "vagrant":
       ensure    => present,
       shell     => '/bin/zsh',
-      require   => Package['zsh'],
     }
     file { 'bootstrap':
         ensure  => file,
