@@ -21,8 +21,8 @@ class dotfiles {
         user      => 'vagarnt',
         path      => '/bin:/usr/bin:/sbin:/usr/sbin',
         command   => "bash /tmp/bootstrap.sh",
-        require   => File['bootstrap'],
         require   => [
+            File['bootstrap'],
             Package['git'],
             Package['tree'],
             Package['vim-enhanced'],
