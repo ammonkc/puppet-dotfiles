@@ -20,7 +20,6 @@ class dotfiles {
     exec {  '/tmp/bootstrap.sh':
         user      => 'vagrant',
         path      => '/bin:/usr/bin:/sbin:/usr/sbin',
-        command   => '/tmp/bootstrap.sh',
         cwd       => '/home/vagrant/',
         require   => [
             File['bootstrap'],
