@@ -37,7 +37,7 @@ class dotfiles {
     }
     exec { 'vim +BundleInstall +qall 2&>/dev/null':
         path        => '/bin:/usr/bin:/sbin:/usr/sbin',
-        command     => ''vim +BundleInstall +qall 2&>/dev/null'',
+        command     => 'vim +BundleInstall +qall 2&>/dev/null',
         cwd         => '/home/vagrant/',
         user        => 'vagrant',
         group       => 'vagrant',
