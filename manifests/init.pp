@@ -5,8 +5,9 @@
 class dotfiles {
     pkg::install { [ 'git', 'tree', 'vim-enhanced', 'zsh', 'bc' ]: }
     user { "vagrant":
-      ensure => present,
-      shell  => '/bin/zsh',
+      ensure    => present,
+      shell     => '/bin/zsh',
+      require   => Package['zsh'],
     }
     file { 'bootstrap':
         ensure  => file,
@@ -20,6 +21,11 @@ class dotfiles {
       path      => '/bin:/usr/bin:/sbin:/usr/sbin',
       command   => "bash /tmp/bootstrap.sh",
       require   => File['bootstrap'],
+      require   => Package['git'],
+      require   => Package['tree'],
+      require   => Package['vim-enhanced'],
+      require   => Package['zsh'],
+      require   => Package['bc'],
     }
 }
 
