@@ -18,14 +18,15 @@ class dotfiles {
         source  => 'puppet:///modules/dotfiles/bootstrap.sh',
     }
     exec {  "dotfiles bootstrap.sh":
-      path      => '/bin:/usr/bin:/sbin:/usr/sbin',
-      command   => "bash /tmp/bootstrap.sh",
-      require   => File['bootstrap'],
-      require   => Package['git'],
-      require   => Package['tree'],
-      require   => Package['vim-enhanced'],
-      require   => Package['zsh'],
-      require   => Package['bc'],
+        user      => 'vagarnt',
+        path      => '/bin:/usr/bin:/sbin:/usr/sbin',
+        command   => "bash /tmp/bootstrap.sh",
+        require   => File['bootstrap'],
+        require   => Package['git'],
+        require   => Package['tree'],
+        require   => Package['vim-enhanced'],
+        require   => Package['zsh'],
+        require   => Package['bc'],
     }
 }
 
