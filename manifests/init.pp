@@ -18,7 +18,7 @@ class dotfiles {
         source  => 'puppet:///modules/dotfiles/bootstrap.sh',
     }
     exec {  "dotfiles bootstrap.sh":
-        user      => 'vagarnt',
+        user      => 'vagrant',
         path      => '/bin:/usr/bin:/sbin:/usr/sbin',
         command   => "bash /tmp/bootstrap.sh",
         require   => [
