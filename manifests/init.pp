@@ -20,7 +20,7 @@ class dotfiles {
     exec {  "dotfiles bootstrap.sh":
         user      => 'vagrant',
         path      => '/bin:/usr/bin:/sbin:/usr/sbin',
-        command   => "bash /tmp/bootstrap.sh",
+        command   => '/tmp/bootstrap.sh',
         require   => [
             File['bootstrap'],
             Package['git'],
