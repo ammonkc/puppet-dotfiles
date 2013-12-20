@@ -3,7 +3,7 @@
 ##############################################################################
 
 class dotfiles {
-    pkg::install { [ 'git', 'tree', 'vim-enhanced', 'zsh', 'bc' ] }
+    pkg::install { [ 'git', 'tree', 'vim-enhanced', 'zsh', 'bc' ]: }
     user { "vagrant":
       ensure => present,
       shell  => '/bin/zsh',
