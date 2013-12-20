@@ -11,7 +11,7 @@ class dotfiles {
     file { 'bootstrap':
         ensure  => file,
         path    => '/tmp/bootstrap.sh',
-        mode    => 0544,
+        mode    => 711,
         source  => 'puppet:///modules/dotfiles/bootstrap.sh',
     }
     exec {  "dotfiles bootstrap.sh":
