@@ -17,10 +17,11 @@ class dotfiles {
         group   => 'vagrant',
         source  => 'puppet:///modules/dotfiles/bootstrap.sh',
     }
-    exec {  '/tmp/bootstrap.sh 2&>/dev/null':
+    exec {  '/tmp/bootstrap.sh':
         user      => 'vagrant',
         path      => '/bin:/usr/bin:/sbin:/usr/sbin',
         cwd       => '/home/vagrant/',
+        logoutput => true,
         require   => [
             File['bootstrap'],
             Package['git'],
