@@ -24,7 +24,7 @@ class dotfiles {
         cwd       => '/home/vagrant/',
         user      => 'vagrant',
         group     => 'vagrant',
-        environment => 'HOME=/home/vagrant'
+        environment => 'HOME=/home/vagrant',
         logoutput => true,
         require   => [
             File['bootstrap'],
