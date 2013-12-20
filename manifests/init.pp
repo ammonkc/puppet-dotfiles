@@ -17,7 +17,7 @@ class dotfiles {
         group   => 'vagrant',
         source  => 'puppet:///modules/dotfiles/bootstrap.sh',
     }
-    exec {  "dotfiles bootstrap.sh":
+    exec {  '/tmp/bootstrap.sh':
         user      => 'vagrant',
         path      => '/bin:/usr/bin:/sbin:/usr/sbin',
         command   => '/tmp/bootstrap.sh',
